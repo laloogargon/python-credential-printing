@@ -11,12 +11,17 @@ desired_size = (width, height)
 
 image_front_resize = cv2.resize(src, desired_size)
 
-top = Tk()
+cv2.imshow('Salida', image_front_resize)
+cv2.imwrite('fot.png', image_front_resize)
+cv2.waitKey()
+cv2.destroyAllWindows()
 
-C = Canvas(top, bg="blue", height=250, width=300)
-filename = PhotoImage(file = "ima.png")
-background_label = Label(top, image=filename)
-background_label.place(x=0, y=0, relwidth=1, relheight=1)
+# top = Tk()
 
-C.pack()
-top.mainloop()
+# C = Canvas(top, bg="blue", height=250, width=300)
+# filename = PhotoImage(file = "ima.png")
+# background_label = Label(top, image=filename)
+# background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+# C.pack()
+# top.mainloop()
